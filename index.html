@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Gaming Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b14;
+            color: white;
+        }
+
+        header {
+            background: #151525;
+            padding: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #00f7ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #151525, #252052);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #ccccdd;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #00f7ff;
+            color: #0b0b14;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .games {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .games h2 {
+            margin-bottom: 25px;
+            color: #00f7ff;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .game-card {
+            background: #19192b;
+            padding: 25px;
+            width: 250px;
+            border-radius: 12px;
+            border: 1px solid #30304a;
+        }
+
+        .game-card .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .game-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .game-card p {
+            color: #bbbbcc;
+            margin-bottom: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #151525;
+            color: #aaaaaa;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎮 GameZone</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>LEVEL UP YOUR GAME</h2>
+        <p>Discover games. Explore adventures. Enter the gaming world.</p>
+        <button onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">
+            Explore Games
+        </button>
+    </section>
+
+    <section class="games" id="games">
+        <h2>🔥 Popular Games</h2>
+
+        <div class="game-container">
+
+            <div class="game-card">
+                <div class="icon">🚗</div>
+                <h3>Racing Games</h3>
+                <p>Explore high-speed racing adventures.</p>
+                <button onclick="alert('Racing games coming soon!')">
+                    Play Now
+                </button>
+            </div>
+
+            <div class="game-card">
+                <div class="icon">🎯</div>
+                <h3>Action Games</h3>
+                <p>Enter exciting action-packed worlds.</p>
+                <button onclick="alert('Action games coming soon!')">
+                    Play Now
+                </button>
+            </div>
+
+            <div class="game-card">
+                <div class="icon">🧱</div>
+                <h3>Adventure Games</h3>
+                <p>Discover new worlds and adventures.</p>
+                <button onclick="alert('Adventure games coming soon!')">
+                    Play Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 GameZone | Your Gaming Universe</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameZone | Play Games Online</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #090d18;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #101629;
+    border-bottom: 1px solid #26324c;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #42e8ff;
+}
+
+.logo span {
+    color: white;
+}
+
+nav a {
+    color: #d6deef;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+.hero {
+    padding: 75px 20px;
+    text-align: center;
+    background: radial-gradient(ellipse at top, #203365, #090d18 70%);
+}
+
+.hero .tag {
+    display: inline-block;
+    color: #42e8ff;
+    border: 1px solid #42e8ff;
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #42e8ff;
+}
+
+.hero p {
+    color: #b7c3db;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+.btn {
+    background: #42e8ff;
+    color: #08101c;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.section {
+    padding: 45px 7%;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 9px;
+}
+
+.section-heading p {
+    color: #96a5c0;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background: #121a2c;
+    border: 1px solid #263550;
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #42e8ff;
+}
+
+.game-icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.game-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #a8b5cb;
+    line-height: 1.6;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+.game-card button {
+    width: 100%;
+}
+
+.badge {
+    color: #42e8ff;
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+#ox-game {
+    display: none;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background: #121a2c;
+    border: 1px solid #263550;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+#status {
+    margin: 18px 0;
+    color: #42e8ff;
+    font-size: 18px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    justify-content: center;
+    gap: 8px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+    color: white;
+    background: #202c45;
+    border: 1px solid #3b4c6d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #2b3c5c;
+}
+
+#ox-game .btn {
+    margin: 5px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #101629;
+    color: #8d9ab2;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 75px);
+    }
+
+    .cell {
+        width: 75px;
+        height: 75px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎮 Game<span>Zone</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="tag">YOUR NEXT GAMING DESTINATION</div>
+    <h1>PLAY MORE.<br><span>HAVE FUN.</span></h1>
+    <p>
+        Discover fun games, challenge your skills,
+        and enjoy your favorite gaming moments
+        right here on GameZone.
+    </p>
+    <button class="btn" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">
+        Explore Games ↓
+    </button>
+</section>
+
+<section class="section" id="games">
+    <div class="section-heading">
+        <h2>🔥 Explore Games</h2>
+        <p>Choose your game and start playing.</p>
+    </div>
+
+    <div class="game-grid">
+
+        <div class="game-card">
+            <div class="game-icon">❌⭕</div>
+            <span class="badge">PLAYABLE NOW</span>
+            <h3>Tic-Tac-Toe</h3>
+            <p>The classic X and O game. Challenge a friend!</p>
+            <button class="btn" onclick="openOX()">Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🏎️</div>
+            <span class="badge">COMING NEXT</span>
+            <h3>Racing Rush</h3>
+            <p>Get ready to race and dodge obstacles.</p>
+            <button class="btn" onclick="comingSoon('Racing Rush')">Explore</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">♟️</div>
+            <span class="badge">COMING NEXT</span>
+            <h3>Chess Master</h3>
+            <p>Plan your moves and outsmart your opponent.</p>
+            <button class="btn" onclick="comingSoon('Chess Master')">Explore</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🎯</div>
+            <span class="badge">COMING NEXT</span>
+            <h3>Action Arena</h3>
+            <p>Test your reflexes in an action-packed game.</p>
+            <button class="btn" onclick="comingSoon('Action Arena')">Explore</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🌍</div>
+            <span class="badge">COMING NEXT</span>
+            <h3>Adventure World</h3>
+            <p>Explore exciting worlds and new challenges.</p>
+            <button class="btn" onclick="comingSoon('Adventure World')">Explore</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🎲</div>
+            <span class="badge">COMING NEXT</span>
+            <h3>Carrom Club</h3>
+            <p>Enjoy the classic board game with friends.</p>
+            <button class="btn" onclick="comingSoon('Carrom Club')">Explore</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="ox-section">
+    <div id="ox-game">
+        <h2>❌⭕ Tic-Tac-Toe</h2>
+        <p id="status">Player X's turn</p>
+
+        <div class="board">
+            <button class="cell" onclick="move(0)"></button>
+            <button class="cell" onclick="move(1)"></button>
+            <button class="cell" onclick="move(2)"></button>
+            <button class="cell" onclick="move(3)"></button>
+            <button class="cell" onclick="move(4)"></button>
+            <button class="cell" onclick="move(5)"></button>
+            <button class="cell" onclick="move(6)"></button>
+            <button class="cell" onclick="move(7)"></button>
+            <button class="cell" onclick="move(8)"></button>
+        </div>
+
+        <button class="btn" onclick="resetOX()">Play Again</button>
+        <button class="btn" onclick="closeOX()">Close Game</button>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="section-heading">
+        <h2>About GameZone</h2>
+        <p>A gaming website project built to bring fun games together in one place.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 GameZone. Made for gamers. 🎮
+</footer>
+
+<script>
+let cells = Array(9).fill("");
+let currentPlayer = "X";
+let gameOver = false;
+
+function openOX() {
+    document.getElementById("ox-game").style.display = "block";
+    document.getElementById("ox-section").scrollIntoView({behavior: "smooth"});
+}
+
+function closeOX() {
+    document.getElementById("ox-game").style.display = "none";
+    document.getElementById("games").scrollIntoView({behavior: "smooth"});
+}
+
+function move(index) {
+    if (cells[index] !== "" || gameOver) return;
+
+    cells[index] = currentPlayer;
+
+    const buttons = document.querySelectorAll(".cell");
+    buttons[index].textContent = currentPlayer;
+
+    if (checkWinner()) {
+        document.getElementById("status").textContent =
+            "🎉 Player " + currentPlayer + " wins!";
+        gameOver = true;
+        return;
+    }
+
+    if (cells.every(cell => cell !== "")) {
+        document.getElementById("status").textContent = "It's a draw!";
+        gameOver = true;
+        return;
+    }
+
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    document.getElementById("status").textContent =
+        "Player " + currentPlayer + "'s turn";
+}
+
+function checkWinner() {
+    const wins = [
+        [0,1,2], [3,4,5], [6,7,8],
+        [0,3,6], [1,4,7], [2,5,8],
+        [0,4,8], [2,4,6]
+    ];
+
+    return wins.some(([a,b,c]) =>
+        cells[a] !== "" &&
+        cells[a] === cells[b] &&
+        cells[a] === cells[c]
+    );
+}
+
+function resetOX() {
+    cells = Array(9).fill("");
+    currentPlayer = "X";
+    gameOver = false;
+
+    document.querySelectorAll(".cell").forEach(button => {
+        button.textContent = "";
+    });
+
+    document.getElementById("status").textContent = "Player X's turn";
+}
+
+function comingSoon(name) {
+    alert(name + " is coming soon! We will add the playable game next.");
+}
+</script>
+
+</body>
+</html>
